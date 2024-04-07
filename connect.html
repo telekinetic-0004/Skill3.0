@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Wallet</title>
+    <script src="/assets/script_common.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Connect your wallet</h1>
+        <p>Please connect your MetaMask wallet.</p>
+    </div>
+
+    <script>
+        // Function to load different views based on URL path
+        function loadView() {
+            var path = window.location.pathname;
+            var app = document.getElementById('app');
+
+            switch (path) {
+                case '/':
+                    connectWallet();
+                    break;
+                // Add more cases for other views if needed
+                default:
+                    // Default to the connect view
+                    connectWallet();
+                    break;
+            }
+        }
+
+        // Wait for DOMContentLoaded event before loading the view
+        document.addEventListener('DOMContentLoaded', loadView);
+    </script>
+</body>
+</html>

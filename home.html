@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Researcher Collaboration Platform</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Researcher Collaboration Platform</h1>
+        <p>Please select an option:</p>
+        <ul>
+            <li id="skillAcquisitionItem"><a href="skill_acquisition/academic_institutions.html">Skill Acquisition (Institutions)</a></li>
+            <li id="enrollmentItem"><a href="enrollment/browse_programs.html">Enrollment into Programs (Institutions)</a></li>
+            <li id="searchingCatalogueItem"><a href="searching_catalogue/search_academicians.html">Skills and Programs (individuals)</a></li>
+        </ul>
+
+        <!-- Display user information -->
+        <div class="user-info">
+            <p>User Address: <span id="userAddress"></span></p>
+            <p>Registration Type: <span id="userType"></span></p>
+        </div>
+    </div>
+    
+    <script src="assets/script_common.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+    // Display user's address
+    const userAddressSpan = document.getElementById('userAddress');
+    if (userAddressSpan) {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const userAddress = accounts[0];
+        userAddressSpan.textContent = userAddress;
+    } else {
+        console.error("Span with id 'userAddress' not found in the DOM.");
+    }
+
+    // Retrieve registration type from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const userType = urlParams.get('type');
+    const userTypeSpan = document.getElementById('userType');
+
+    if (userTypeSpan) {
+        // Display registration type
+        userTypeSpan.textContent = userType || 'Not specified';
+
+        if (userType === 'individual') {
+            document.getElementById('skillAcquisitionItem').style.display = 'none';
+            document.getElementById('enrollmentItem').style.display = 'none';
+        } else if (userType === 'institution') {
+            document.getElementById('searchingCatalogueItem').style.display = 'none';
+        }
+    } else {
+        console.error("Span with id 'userType' not found in the DOM.");
+    }
+});
+
+    </script>
+</body>
+</html>

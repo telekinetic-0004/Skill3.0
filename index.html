@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Type</title>
+</head>
+<body>
+    <h1>Choose Registration Type</h1>
+    <button id="individual">Individual</button>
+    <button id="institution">Institution</button>
+    </div>
+    <script>
+        // Add a click event listener to the individual button
+        const individualBtn = document.getElementById('individual');
+        if (individualBtn) {
+            individualBtn.addEventListener('click', function() {
+                // Redirect to connect.html with registration type as URL parameter
+                window.location.href = 'connect.html?type=individual';
+            });
+        } else {
+            console.error("Button with id 'individual' not found in the DOM.");
+        }
+
+        // Add a click event listener to the institution button
+        const institutionBtn = document.getElementById('institution');
+        if (institutionBtn) {
+            institutionBtn.addEventListener('click', function() {
+                // Redirect to connect.html with registration type as URL parameter
+                window.location.href = 'connect.html?type=institution';
+            });
+        } else {
+            console.error("Button with id 'institution' not found in the DOM.");
+        }
+    </script>
+</body>
+</html>
