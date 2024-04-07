@@ -1,0 +1,154 @@
+{
+    "contractAddress":"0x53Ea848f8B5fe7162dE0f5A81861Ef9DDd902e45",
+    "contractName": "SkillAcquisition",
+  "sourceName": "contracts/SkillAquisition.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "individual",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "academicInstitution",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "program",
+          "type": "string"
+        }
+      ],
+      "name": "Enrollment",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "individual",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "academicInstitution",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "skill",
+          "type": "string"
+        }
+      ],
+      "name": "SkillAcquisition",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "academicInstitutions",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "academician",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "program",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_individual",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_academicInstitution",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_skill",
+          "type": "string"
+        }
+      ],
+      "name": "acquireSkill",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_individual",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_academicInstitution",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_program",
+          "type": "string"
+        }
+      ],
+      "name": "enrollInProgram",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "skillHolders",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "individual",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+    "SEPOLIAURL":"https://eth-sepolia.g.alchemy.com/v2/K_-HJBaGDw209upIFnqbN7jXrdvh_fvf",
+    "PRIVKEY":"d81b2724c44e2fa20cd5f372adf2b90ed24dd8122d5a70f458ed20044c0fa76d",
+    "AdminAddress":"0xad71560099fbC33D35c726e75f69aA66d6dbBE69"
+}
