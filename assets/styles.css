@@ -1,30 +1,105 @@
 /* Add your CSS styles here */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  width: 900px; /* Adjust container width as needed */
+  height: 500px; /* Adjust container height as needed */
+  background-color: #f0f0f0; /* Container background color */
+  padding: 50px; /* Add padding for spacing */
+  border: 1px solid #ccc; /* Add border for visual separation */
+  text-align: center; /* Center button horizontally */
+  /* display: flex; Use flexbox for vertical centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 0 auto;
 }
 
-form {
-    margin-bottom: 20px;
+button {
+  margin: 10px;
+  padding: 20px 40px;
+  font-size: 20px;
+  background-color: #2312e088;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+button:hover {
+  background-color: #090445; /* Change background color on hover */
+}
+
+/* Form container */
+.form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* Form labels */
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Form inputs */
+.form input[type="text"],
+.form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border don't increase width */
+}
+
+/* Submit button */
+.form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.my.form input[type="submit"]:hover {
+  background-color: #0056b3;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Set background image */
+  background-color: #090445;
+
+  /* Background image properties */
+
+  background-size: cover; /* Cover the entire background */
+  background-repeat: no-repeat; /* Do not repeat the background image */
 }
 
 .user-info {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #connectWalletBtn {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
